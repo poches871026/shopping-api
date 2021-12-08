@@ -1,0 +1,57 @@
+spring:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/shoppingmall
+    username: shoppingmall
+    password: zxcv1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: shopingmall
+#    password: zxcv1234
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        show_sql: true
+
+
+logging:
+  level:
+    com.tutorial: debug
+
+
+# Secret ?? ?? ???? Base64 ? ???? ? ?? (?? ???? ???? ??? ??? ??)
+# $ echo 'spring-boot-security-jwt-tutorial-jiwoon-spring-boot-security-jwt-tutorial' | base64
+jwt:
+  secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
+
+server:
+  port: 8222
+
+mybatis:
+  mapper-locations: mybatis-mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+

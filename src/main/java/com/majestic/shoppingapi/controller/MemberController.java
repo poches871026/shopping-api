@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/member")
@@ -36,5 +38,13 @@ public class MemberController {
         return ResponseEntity.ok(memberResponseDto);
     }
 
+    @GetMapping("/list2")
+    public MemberResponseDto getMemberList2() {
+
+        MemberResponseDto memberResponseDto = memberService.getMemberList();
+
+        System.out.println("MemberResponseDto2222 :: " + memberResponseDto);
+        return memberResponseDto;
+    }
 
 }

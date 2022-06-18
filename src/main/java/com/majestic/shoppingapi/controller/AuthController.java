@@ -37,6 +37,8 @@ public class AuthController {
 
         System.out.println("httpHeaders ::: " + httpHeaders);
 
+        System.out.println("ResponseEntity.ok(tokenDto) ::: " + ResponseEntity.ok(tokenDto.toString()));
+
         return ResponseEntity.ok().headers(httpHeaders).body(tokenDto);
     }
 
